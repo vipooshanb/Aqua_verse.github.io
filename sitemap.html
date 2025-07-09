@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>User Sitemap SVG</title>
+  <link rel="stylesheet" href="css/sitemap.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/global.css"/>
+</head>
+<body>
+  <header id="top">
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="home.html">
+            <img src="Images/Aqua_Verse-logo.png" alt="AquaVerse Logo" class="nav-logo-img" />
+          </a>
+        </div>
+        <div class="nav-menu" id="nav-menu">
+          <a href="home.html" class="nav-link" aria-label="Home">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+          </a>
+          <a href="team.html" class="nav-link" aria-label="Team">
+            <i class="fas fa-users"></i>
+            <span>Team</span>
+          </a>
+          <a href="table.html" class="nav-link" aria-label="Table">
+            <i class="fas fa-table"></i>
+            <span>Table</span>
+          </a>
+          <a href="volunteer.html" class="nav-link" aria-label="Volunteer">
+            <i class="fas fa-hands-helping"></i>
+            <span>Volunteer</span>
+          </a>
+          <a href="sitemap.html" class="nav-link" aria-label="Site Map">
+            <i class="fas fa-sitemap"></i>
+            <span>Site Map</span>
+          </a>
+          <a href="feedback.html" class="nav-link" aria-label="Feedback">
+            <i class="fas fa-comment-dots"></i>
+            <span>Feedback</span>
+          </a>
+          <a href="profile.html" class="nav-link" aria-label="Profile">
+            <i class="fas fa-user-circle"></i>
+            <span>Profile</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <h1 class="sitemap-title">Sitemap</h1>
+
+  <svg
+    viewBox="0 0 800 500"
+    xmlns="http://www.w3.org/2000/svg"
+    role="img"
+    aria-label="Website sitemap showing hierarchy of pages under Home"
+  >
+    <defs>
+      <symbol id="globe" viewBox="0 0 24 24" fill="#00aaff">
+        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+      </symbol>
+      <symbol id="home" viewBox="0 0 24 24" fill="#00aaff">
+        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+      </symbol>
+      <symbol id="volunteer" viewBox="0 0 24 24" fill="#00aaff">
+        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+        />
+      </symbol>
+      <symbol id="profile" viewBox="0 0 24 24" fill="#00aaff">
+        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+        />
+      </symbol>
+      <symbol id="feedback" viewBox="0 0 24 24" fill="#00aaff">
+        <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4V4c0-1.1-.9-2-2-2zm-2 9H6v-2h12v2zm0-3H6V6h12v2z"
+        />
+      </symbol>
+      <symbol id="team" viewBox="0 0 24 24" fill="#00aaff">
+        <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"
+        />
+      </symbol>
+      <symbol id="validation" viewBox="0 0 24 24" fill="#00aaff">
+        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 15l-4-4 1.41-1.41L11 13.17l5.59-5.59L18 9l-7 7z"
+        />
+      </symbol>
+    </defs>
+
+    <!-- Home Node -->
+    <a href="#" role="link" tabindex="0" aria-label="Home page link">
+      <rect x="360" y="50" width="80" height="80" rx="20" class="node" />
+      <use href="#globe" x="380" y="60" width="40" height="38" />
+      <text x="400" y="115" text-anchor="middle" class="node-text">Home</text>
+    </a>
+
+    <!-- Connecting lines -->
+    <line stroke-width="2" x1="400" y1="130" x2="400" y2="150" />
+    <line stroke-width="2" x1="70" y1="150" x2="70" y2="190" />
+    <line stroke-width="2" x1="200" y1="150" x2="200" y2="190" />
+    <line stroke-width="2" x1="330" y1="150" x2="330" y2="190" />
+    <line stroke-width="2" x1="460" y1="150" x2="460" y2="190" />
+    <line stroke-width="2" x1="590" y1="150" x2="590" y2="190" />
+    <line stroke-width="2" x1="720" y1="150" x2="720" y2="190" />
+    <line stroke-width="2" x1="70" y1="150" x2="720" y2="150" />
+
+    <line stroke-width="2" x1="70" y1="270" x2="70" y2="461" />
+    <line stroke-width="2" x1="720" y1="270" x2="720" y2="461" />
+
+    <line stroke-width="2" x1="70" y1="310" x2="120" y2="310" />
+    <line stroke-width="2" x1="70" y1="360" x2="120" y2="360" />
+    <line stroke-width="2" x1="70" y1="410" x2="120" y2="410" />
+    <line stroke-width="2" x1="70" y1="460" x2="120" y2="460" />
+
+    <line stroke-width="2" x1="670" y1="310" x2="720" y2="310" />
+    <line stroke-width="2" x1="670" y1="360" x2="720" y2="360" />
+    <line stroke-width="2" x1="670" y1="410" x2="720" y2="410" />
+    <line stroke-width="2" x1="670" y1="460" x2="720" y2="460" />
+
+    <!-- Home Page -->
+    <a href="home.html" role="link" tabindex="0" aria-label="Main Home page">
+      <rect x="20" y="190" width="100" height="80" rx="20" class="node" />
+      <use href="#home" x="50" y="195" width="40" height="40" />
+      <text x="70" y="250" text-anchor="middle" class="node-text">Home Page</text>
+    </a>
+
+    <a href="content_ST3.html" role="link" tabindex="0" aria-label="Exploring page">
+      <rect x="120" y="290" width="120" height="40" rx="15" class="node" />
+      <text x="180" y="315" text-anchor="middle" class="node-text-1">
+        <tspan x="180" dy="-0.6em">Exploring life</tspan>
+        <tspan x="180" dy="1.2em">below water</tspan>
+      </text>
+    </a>
+    <a href="content_ST1.html" role="link" tabindex="0" aria-label="Threats page">
+      <rect x="120" y="340" width="120" height="40" rx="15" class="node" />
+      <text x="180" y="365" text-anchor="middle" class="node-text-1">
+        <tspan x="180" dy="-0.6em">Threats facing</tspan>
+        <tspan x="180" dy="1.2em">our ocean</tspan>
+      </text>
+    </a>
+    <a href="content_ST4.html" role="link" tabindex="0" aria-label="Guardians page">
+      <rect x="120" y="390" width="120" height="40" rx="15" class="node" />
+      <text x="180" y="415" text-anchor="middle" class="node-text-1">
+        <tspan x="180" dy="-0.6em">Guardians of </tspan>
+        <tspan x="180" dy="1.2em">the aquaverse</tspan>
+      </text>
+    </a>
+    <a href="content_ST2.html" role="link" tabindex="0" aria-label="Future page">
+      <rect x="120" y="440" width="120" height="40" rx="15" class="node" />
+      <text x="180" y="465" text-anchor="middle" class="node-text-1">
+        <tspan x="180" dy="-0.6em">Building a better</tspan>
+        <tspan x="180" dy="1.2em">ocean future</tspan>
+      </text>
+    </a>
+
+    <!-- Volunteer -->
+    <a href="volunteer.html" role="link" tabindex="0" aria-label="Volunteer page">
+      <rect x="150" y="190" width="100" height="80" rx="20" class="node" />
+      <use href="#volunteer" x="180" y="195" width="40" height="40" />
+      <text x="200" y="250" text-anchor="middle" class="node-text">Volunteer</text>
+    </a>
+
+    <!-- User Profile -->
+    <a href="profile.html" role="link" tabindex="0" aria-label="User Profile page">
+      <rect x="280" y="190" width="100" height="80" rx="20" class="node" />
+      <use href="#profile" x="310" y="195" width="40" height="40" />
+      <text x="330" y="250" text-anchor="middle" class="node-text">User Profile</text>
+    </a>
+
+    <!-- Feedbacks -->
+    <a href="feedback.html" role="link" tabindex="0" aria-label="Feedbacks page">
+      <rect x="410" y="190" width="100" height="80" rx="20" class="node" />
+      <use href="#feedback" x="440" y="195" width="40" height="40" />
+      <text x="460" y="250" text-anchor="middle" class="node-text">Feedbacks</text>
+    </a>
+
+    <!-- Team -->
+    <a href="team.html" role="link" tabindex="0" aria-label="Team page">
+      <rect x="540" y="190" width="100" height="80" rx="20" class="node" />
+      <use href="#team" x="570" y="195" width="40" height="40" />
+      <text x="590" y="250" text-anchor="middle" class="node-text">Team</text>
+    </a>
+
+    <!-- Validation -->
+    <a href="#" role="link" tabindex="0" aria-label="Validation page">
+      <rect x="670" y="190" width="100" height="80" rx="20" class="node" />
+      <use href="#validation" x="700" y="195" width="40" height="38" />
+      <text x="720" y="250" text-anchor="middle" class="node-text">Validation</text>
+    </a>
+
+    <a href="validation_ST1.html" role="link" tabindex="0" aria-label="Student 1 page">
+      <rect x="550" y="290" width="120" height="40" rx="15" class="node" />
+      <text x="610" y="315" text-anchor="middle" class="node-text-1">Student 1</text>
+    </a>
+    <a href="validation_ST2.html" role="link" tabindex="0" aria-label="Student 2 page">
+      <rect x="550" y="340" width="120" height="40" rx="15" class="node" />
+      <text x="610" y="365" text-anchor="middle" class="node-text-1">Student 2</text>
+    </a>
+    <a href="validation_ST3.html" role="link" tabindex="0" aria-label="Student 3 page">
+      <rect x="550" y="390" width="120" height="40" rx="15" class="node" />
+      <text x="610" y="415" text-anchor="middle" class="node-text-1">Student 3</text>
+    </a>
+    <a href="validation_ST4.html" role="link" tabindex="0" aria-label="Student 4 page">
+      <rect x="550" y="440" width="120" height="40" rx="15" class="node" />
+      <text x="610" y="465" text-anchor="middle" class="node-text-1">Student 4</text>
+    </a>
+  </svg>
+
+  <footer>
+    <div class="footer-container">
+      <div class="student-editors">
+        <h3>Page Editors</h3>
+        <div class="editor-links">
+          <a href="pageEditor_ST1.html" class="editor-link">Student 1</a>
+          <a href="pageEditor_ST2.html" class="editor-link">Student 2</a>
+          <a href="pageEditor_ST3.html" class="editor-link">Student 3</a>
+          <a href="pageEditor_ST4.html" class="editor-link">Student 4</a>
+        </div>
+      </div>
+
+      <div class="footer-content">
+        <h2>AquaVerse</h2>
+        <p class="tagline">"Your voice can echo underwater. Join Aquaverse."</p>
+        <p class="description">
+          Make waves with us and become part of the movement to protect our oceans. Together, we
+          can create a sustainable future for marine life and preserve the beauty of our underwater
+          world.
+        </p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/zen_coders_x?igsh=MWdoOG92MzdldnMxag==" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="page-credit">
+        <h3>Page Credit</h3>
+        <p>This page was edited by <a href="pageEditor_ST4.html" class="editor-link">Miss.K.Vishalini</a></p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 AquaVerse | All Rights Reserved</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>User Profile</title>
+  <link rel="stylesheet" href="css/profile.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/global.css"/>
+</head>
+<body> 
+  <video autoplay muted loop id="bgVideo">
+    <source src="images/videoplayback.mp4" type="video/mp4" />
+  </video>
+
+  <header id="top">
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="home.html">
+            <img src="Images/Aqua_Verse-logo.png" alt="AquaVerse Logo" class="nav-logo-img">
+          </a>
+        </div>
+        <div class="nav-menu" id="nav-menu">
+          <a href="Aquaverse.html" class="nav-link"><i class="fas fa-home"></i><span>Home</span></a>
+          <a href="team.html" class="nav-link"><i class="fas fa-users"></i><span>Team</span></a>
+          <a href="table.html" class="nav-link"><i class="fas fa-table"></i><span>Table</span></a>
+          <a href="volunteer.html" class="nav-link"><i class="fas fa-hands-helping"></i><span>Volunteer</span></a>
+          <a href="sitemap.html" class="nav-link"><i class="fas fa-sitemap"></i><span>Site Map</span></a>
+          <a href="feedback.html" class="nav-link"><i class="fas fa-comment-dots"></i><span>Feedback</span></a>
+          <a href="profile.html" class="nav-link"><i class="fas fa-user-circle"></i><span>Profile</span></a>
+        </div>
+      </div>
+    </nav>
+  </header> 
+
+  <div class="layout">
+    <nav class="nav-bar-1">
+      <div class="nav-logo-1">
+        <img src="Images/image.jpg" alt="Logo" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="#profile" title="Profile"><i class="fas fa-user"></i></a></li>
+        <li><a href="#bio" title="Bio"><i class="fas fa-id-card"></i></a></li>
+        <li><a href="#goals" title="Goals"><i class="fas fa-bullseye"></i></a></li>
+        <li><a href="#experience" title="Experience"><i class="fas fa-briefcase"></i></a></li>
+        <li><a href="#availability" title="Availability"><i class="fas fa-calendar-check"></i></a></li>
+        <li><a href="#contact" title="Contact"><i class="fas fa-envelope"></i></a></li>
+      </ul>
+    </nav>
+
+    <main class="main-content">
+      <!-- Profile Section -->
+      <section class="hero" id="profile">
+        <img src="Images/image.jpg" alt="Profile Picture" class="profile-pic" />
+        <div class="hero-info">
+          <h1>Marina Deep</h1>
+          <p class="quote">“Diving into the wonders of the ocean.”</p>
+          <ul class="info">
+            <li><strong>Age:</strong> 22</li>
+            <li><strong>Work:</strong> Student</li>
+            <li><strong>Family:</strong> Single</li>
+            <li><strong>Location:</strong> Colombo</li>
+          </ul>
+          <div class="skills">
+            <h3>Skills</h3>
+            <div class="skill"><label>Communication</label><div class="bar"><div class="fill" style="width: 80%;"></div></div></div>
+            <div class="skill"><label>Team Working</label><div class="bar"><div class="fill" style="width: 65%;"></div></div></div>
+            <div class="skill"><label>IT</label><div class="bar"><div class="fill" style="width: 90%;"></div></div></div>
+            <div class="skill"><label>Presentation</label><div class="bar"><div class="fill" style="width: 75%;"></div></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bio -->
+      <section class="card-row" id="bio">
+        <div class="card-short-bio">
+          <h2>Short Bio</h2>
+          <p>Dexter Murphy is a third-year Computer Science student passionate about web development and volunteer work. She enjoys helping in local community initiatives and aspires to contribute toward global goals through tech innovation.</p>
+        </div>
+      </section>
+
+      <!-- Goals / Experience / Frustrations -->
+      <section class="card-row">
+        <div class="card" id="goals">
+          <h2><i class="fas fa-bullseye heading-icon"></i> Goals</h2>
+          <ul>
+            <li><i class="fas fa-laptop-code"></i> Learn Web Development</li>
+            <li><i class="fab fa-github"></i> Contribute to Open Source</li>
+            <li><i class="fas fa-hand-holding-water"></i> Volunteer for Ocean Cleanups</li>
+            <li><i class="fas fa-bullhorn"></i> Raise Awareness on Marine Pollution</li>
+          </ul>
+        </div>
+        <div class="card" id="experience">
+          <h2><i class="fas fa-briefcase heading-icon"></i> Experience</h2>
+          <ul>
+            <li><i class="fas fa-broom"></i> Participated in monthly beach clean-up events organized by Ocean Warriors UK.</li>
+            <li><i class="fas fa-vial"></i> Volunteered with a university marine biology team to collect microplastic samples.</li>
+            <li><i class="fas fa-globe"></i> Created an awareness website showcasing facts and actions on Goal 14.</li>
+          </ul>
+        </div>
+        <div class="card" id="frustrations">
+          <h2><i class="fas fa-exclamation-triangle heading-icon"></i> Frustrations</h2>
+          <ul>
+            <li><i class="fas fa-exclamation-triangle"></i> Lack of local opportunities to contribute to marine conservation directly.</li>
+            <li><i class="fas fa-database"></i> Difficulty in finding reliable data on plastic pollution impact in real time.</li>
+            <li><i class="fas fa-gavel"></i> Feeling that government policies are too slow to protect marine ecosystems.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Availability / UN Goals / Contact -->
+      <section class="card-row">
+        <div class="card availability-card" id="availability">
+          <h2><i class="fas fa-calendar-check heading-icon"></i> Volunteering Availability</h2>
+          <div class="volunteer-legend">
+            <span class="available-box"></span> Available
+            <span class="unavailable-box"></span> Not Available
+          </div>
+          <table class="volunteer-table">
+            <thead>
+              <tr>
+                <th>Day</th>
+                <th>Morning (8–12)</th>
+                <th>Afternoon (12–4)</th>
+                <th>Evening (4–8)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Monday</td><td class="available">✓</td><td class="available">✓</td><td class="unavailable">–</td></tr>
+              <tr><td>Tuesday</td><td class="unavailable">–</td><td class="available">✓</td><td class="available">✓</td></tr>
+              <tr><td>Wednesday</td><td class="available">✓</td><td class="unavailable">–</td><td class="available">✓</td></tr>
+              <tr><td>Thursday</td><td class="available">✓</td><td class="available">✓</td><td class="available">✓</td></tr>
+              <tr><td>Friday</td><td class="unavailable">–</td><td class="available">✓</td><td class="available">✓</td></tr>
+              <tr><td>Saturday</td><td class="available">✓</td><td class="available">✓</td><td class="unavailable">–</td></tr>
+              <tr><td>Sunday</td><td class="unavailable">–</td><td class="unavailable">–</td><td class="available">✓</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card" id="un-goals">
+          <h2><i class="fas fa-fish heading-icon"></i> UN Goals I Support</h2>
+          <div class="interest-icons">
+            <div class="interest"><i class="fas fa-water icon-style" aria-hidden="true"></i><p>Clean Oceans</p></div>
+            <div class="interest"><i class="fas fa-recycle icon-style" aria-hidden="true"></i><p>Reduce Plastic</p></div>
+            <div class="interest"><i class="fas fa-tree icon-style" aria-hidden="true"></i><p>Mangrove Planting</p></div>
+            <div class="interest"><i class="fas fa-fish icon-style" aria-hidden="true"></i><p>Sustainable Fishing</p></div>
+            <div class="interest"><i class="fas fa-bullhorn icon-style" aria-hidden="true"></i><p>Awareness Campaigns</p></div>
+          </div>
+        </div>
+        <div class="card contact-card" id="contact">
+          <h2><i class="fas fa-envelope heading-icon"></i> Contact Me</h2>
+          <form class="contact-form" action="#" method="post">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <input type="tel" name="phone" placeholder="Your Phone Number" />
+            <textarea name="message" rows="4" placeholder="Your Message..."></textarea>
+            <div class="form-btns">
+              <button type="submit">Send</button>
+              <button type="reset" class="reset-btn">Reset</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="student-editors">
+        <h3>Page Editors</h3>
+        <div class="editor-links">
+          <a href="pageEditor_ST1.html" class="editor-link">Student 1</a>
+          <a href="pageEditor_ST2.html" class="editor-link">Student 2</a>
+          <a href="pageEditor_ST3.html" class="editor-link">Student 3</a>
+          <a href="pageEditor_ST4.html" class="editor-link">Student 4</a>
+        </div>
+      </div>
+      <div class="footer-content">
+        <h2>AquaVerse</h2>
+        <p class="tagline">"Your voice can echo underwater. Join Aquaverse."</p>
+        <p class="description">Make waves with us and become part of the movement to protect our oceans. Together, we can create a sustainable future for marine life and preserve the beauty of our underwater world.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/zen_coders_x?igsh=MWdoOG92MzdldnMxag==" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="page-credit">
+        <h3>Page Credit</h3>
+        <p>This page was edited by <a href="pageEditor_ST4.html" class="editor-link">Miss.K.Vishalini</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 AquaVerse | All Rights Reserved</p>
+    </div>
+  </footer>
+
+</body>
+</html>

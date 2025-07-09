@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Feedback Form </title>
+        <link rel="stylesheet" href="css/feedback.css">
+        <link rel="stylesheet" href="css/global.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" >
+    </head>
+    <body>
+        <header id="Home">
+        <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="home.html">
+                    <img src="Images/Aqua_Verse-logo.png" alt="AquaVerse Logo" class="nav-logo-img">
+                </a></div>
+
+        <div class="nav-menu" id="nav-menu">
+            <a href="home.html" class="nav-link">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="team.html" class="nav-link">
+                <i class="fas fa-users"></i>
+                <span>Team</span>
+            </a>
+            <a href="table.html" class="nav-link">
+                <i class="fas fa-table"></i>
+                <span>Table</span>
+            </a>
+            <a href="volunteer.html" class="nav-link">
+                <i class="fas fa-hands-helping"></i>
+                <span>Volunteer</span>
+            </a>
+            <a href="sitemap.html" class="nav-link">
+                <i class="fas fa-sitemap"></i>
+                <span>Site Map</span>
+            </a>
+            <a href="feedback .html" class="nav-link">
+                <i class="fas fa-comment-dots"></i>
+                <span>Feedback</span>
+            </a>
+            <a href="profile.html" class="nav-link">
+                <i class="fas fa-user-circle"></i>
+                <span>Profile</span>
+            </a>
+            </div>
+        </div>
+        </nav>
+
+        </header>
+        <video autoplay muted loop id="bg-video">
+            <source src="Images/videoplayback.mp4" type="video/mp4">
+        </video>
+        
+        <div class="feedback-container">
+
+            <form action="https://api.web3forms.com/submit" method="POST">
+
+                <h1>Feedback Form</h1>
+                
+                <fieldset>
+                    
+                    <legend>Personal Information</legend>
+
+                    <label for="name">
+                        <i class='bx bx-user' ></i> Your Name:</label>
+                    <input type="hidden" name="access_key" value="97ebed28-847e-41ed-b1d8-4843c65848c8">
+
+                    <input type="text" id="name" name="name" placeholder="Enter your name" maxlength="50" required title="Please enter your full name" autofocus>
+                    
+                    <label for="address">
+                        <i class='bx bxs-home'></i> Your Address:</label>
+                    <input type="text" id="address" name="address" placeholder="No:21, Kollupitiya, Galle Road" maxlength="100">
+
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="email">
+                                <i class='bx bxl-gmail' ></i> Your Email:</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" maxlength="50" required title="Enter a valid email address">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">
+                                <i class='bx bx-phone' ></i> Phone Number:</label>
+                            <input type="tel" id="phone" name="phone" placeholder="e.g. +94 77 123 4567" maxlength="15">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Feedback Details</legend>
+
+                    <label>Rate our website:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="rating" value="5" required> Excellent </label>
+                        <label><input type="radio" name="rating" value="4"> Very Good </label>
+                        <label><input type="radio" name="rating" value="3"> Good </label>
+                        <label><input type="radio" name="rating" value="2"> Fair </label>
+                        <label><input type="radio" name="rating" value="1"> Poor </label>
+                    </div>
+
+                    <label>Visual Rating:</label>
+                    <div class="emoji-rating">
+                        <label><input type="radio" name="emojiRate" value="😍"> 😍</label>
+                        <label><input type="radio" name="emojiRate" value="😊"> 😊</label>
+                        <label><input type="radio" name="emojiRate" value="😐"> 😐</label>
+                        <label><input type="radio" name="emojiRate" value="😢"> 😢</label>
+                    </div>
+
+                    <label>What features did you like?</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="features" value="Design"> Design</label>
+                        <label><input type="checkbox" name="features" value="Speed"> Speed</label>
+                        <label><input type="checkbox" name="features" value="Content"> Content</label>
+                        <label><input type="checkbox" name="features" value="Navigation"> Navigation</label>
+                    </div>
+
+                    <label for="comments">Your Comments:</label>
+                    <textarea id="comments" name="comments" rows="4" maxlength="500" placeholder="Your Feedback" required title="Leave your feedback here"></textarea>
+
+                </fieldset>
+                    <legend>Upload & Schedule</legend>
+
+                    <label for="fileUpload">Attach a File (Optional):</label>
+                    <input type="file" id="fileUpload" name="fileUpload" accept=".jpg,.jpeg,.png,.pdf">
+
+                    <label for="schedule">Preferred Feedback Time:</label>
+                    <input type="datetime-local" id="schedule" name="schedule" value="2025-06-18T10:30">
+                </fieldset>
+
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </form>
+        </div>
+        
+        <footer>
+            <div class="footer-container">
+            <!-- Student Page Editors - LEFT -->
+            <div class="student-editors">
+                <h3>Page Editors</h3>
+                <div class="editor-links">
+                <a href="pageEditor_ST1.html" class="editor-link">Student 1 </a>
+                <a href="pageEditor_ST2.html" class="editor-link">Student 2 </a>
+                <a href="pageEditor_ST3.html" class="editor-link">Student 3 </a>
+                <a href="pageEditor_ST4.html" class="editor-link">Student 4 </a>
+                </div>
+            </div>
+            
+            <!-- Main footer content - CENTER -->
+            <div class="footer-content">
+                <h2>AquaVerse</h2>
+                <p class="tagline">"Your voice can echo underwater. Join Aquaverse."</p>
+                <p class="description">Make waves with us and become part of the movement to protect our oceans. Together, we can create a sustainable future for marine life and preserve the beauty of our underwater world.</p>
+                <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/zen_coders_x?igsh=MWdoOG92MzdldnMxag==" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <!-- Page Credit - RIGHT -->
+            <div class="page-credit">
+                <h3>Page Credit</h3>
+                <p>This page was edited by <a href="pageEditor_ST3.html" class="editor-link">Mr.M.Riyas</a></p>
+            </div>
+            </div>
+            
+            <!-- Copyright section -->
+            <div class="footer-bottom">
+            <p>&copy; 2025 AquaVerse | All Rights Reserved</p>
+            </div>
+        </footer>
+    </body>
+</html>

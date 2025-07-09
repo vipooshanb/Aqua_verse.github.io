@@ -1,0 +1,209 @@
+body {
+    font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+    background-color: #000000bd;
+    padding: 0;
+    margin: 0;
+}
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    z-index: -1;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+.feedback-container {
+    background: rgba(255,255,255,0.95);
+    font-family: 'Quicksand', Arial, sans-serif;
+    padding: 48px 36px 36px 36px;
+    border-radius: 18px;
+    max-width: 600px;
+    margin: 160px auto 40px auto;
+    box-shadow: 0 8px 32px 0 rgba(0, 60, 120, 0.18);
+    border: 1.5px solid #e0eaff;
+    position: relative;
+}
+
+.feedback-container h1 {
+    font-family: 'Pacifico', cursive;
+    margin-top: 0;
+    text-align: center;
+    color: #0099cc;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+    text-shadow: 0 2px 8px #00ccff22;
+}
+
+form {
+    width: 100%;
+}
+
+fieldset {
+    margin-bottom: 24px;
+    padding: 24px 18px 18px 18px;
+    border: 1.5px solid #00ccff;
+    border-radius: 12px;
+    background-color: #f7fcff;
+    box-shadow: 0 2px 8px #00ccff11;
+    transition: box-shadow 0.2s;
+}
+
+fieldset:focus-within {
+    box-shadow: 0 4px 16px #00ccff33;
+    border-color: #0099cc;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #0099cc;
+    letter-spacing: 1px;
+    padding: 0 8px;
+}
+
+label {
+    display: block;
+    margin-top: 18px;
+    color: #003344;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="datetime-local"],
+input[type="file"],
+textarea {
+    width: 100%;
+    padding: 12px 10px;
+    margin-top: 6px;
+    border: 1.5px solid #b3e0ff;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    background: #fafdff;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="datetime-local"]:focus,
+input[type="file"]:focus,
+textarea:focus {
+    border: 1.5px solid #00ccff;
+    box-shadow: 0 2px 8px #00ccff22;
+    outline: none;
+}
+
+.row {
+    display: flex;
+    gap: 24px;
+    margin-top: 16px;
+}
+
+.form-group {
+    flex: 1;
+}
+
+.radio-group,
+.checkbox-group,
+.emoji-rating {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 8px 0 0 0;
+}
+
+.radio-group label,
+.checkbox-group label,
+.emoji-rating label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #0077aa;
+    font-size: 1rem;
+    font-weight: 500;
+    background: #eaf7ff;
+    padding: 6px 14px;
+    border-radius: 18px;
+    transition: background 0.2s;
+    cursor: pointer;
+}
+
+.radio-group label:hover,
+.checkbox-group label:hover,
+.emoji-rating label:hover {
+    background: #d0f0ff;
+}
+
+textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+button {
+    margin-top: 24px;
+    padding: 12px 0;
+    background: linear-gradient(90deg, #00ccff 40%, #0099cc 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 48%;
+    font-size: 1.1rem;
+    font-weight: 700;
+    box-shadow: 0 2px 8px #00ccff22;
+    transition: background 0.2s, box-shadow 0.2s;
+    margin-right: 2%;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #0099cc 40%, #00ccff 100%);
+    box-shadow: 0 4px 16px #00ccff33;
+}
+
+button[type="reset"] {
+    background: linear-gradient(90deg, #ff5e62 40%, #ff9966 100%);
+    margin-right: 0;
+}
+
+button[type="reset"]:hover {
+    background: linear-gradient(90deg, #ff9966 40%, #ff5e62 100%);
+}
+
+input:invalid, textarea:invalid {
+    border: 2px solid #ff5e62;
+}
+
+input:invalid::placeholder,
+textarea:invalid::placeholder {
+    color: #ff5e62;
+}
+
+@media (max-width: 700px) {
+    .feedback-container {
+        margin: 120px 20px 40px 20px;
+        padding: 32px 24px 24px 24px;
+        margin-top: 120px;
+    }
+}
+
+
+.social-icons a {
+    margin: 0 10px;
+    color: #00ccff;
+    font-size: 22px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ffffff;
+}

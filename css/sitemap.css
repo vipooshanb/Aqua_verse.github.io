@@ -1,0 +1,142 @@
+/* Sitemap-specific styles */
+
+
+body {
+  background: url('pexels-francesco-ungaro-3324590.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding-top: 100px;
+  position: relative;
+  overflow-x: hidden;
+}
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(162, 218, 247, 0.468);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.sitemap-title, .node, .node-text, svg, footer {
+  position: relative;
+  z-index: 1;
+}
+
+.sitemap-title {
+  margin-top: 200px;
+  text-align: center;
+  color: #fbfcf9;
+  margin: 29px auto 24px; /* Center horizontally */
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-weight: 600;
+  background-color: #0c606067; /* Semi-transparent aqua */
+  background-size: contain;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); /* For Safari */
+  width: fit-content; /* Adjust width to content */
+  padding: 10px;
+  font-size: 50px;
+}
+
+svg {
+  display: block;
+  margin: 20px auto;
+  max-width: 90%;
+  height: auto;
+  min-height: 300px;
+}
+
+.node {
+  fill: #102542;
+  stroke: #f6f6f9d9;
+  stroke-width: 2;
+  filter: drop-shadow(0 4px 16px rgba(33,212,253,0.18));
+  backdrop-filter: blur(6px);
+  transition: fill 0.3s ease, stroke 0.3s ease;
+  
+}
+
+
+.node:hover {
+  fill: rgba(22, 7, 234, 0.2);
+}
+
+.node:focus,
+.node:active,
+a:focus .node,
+a:active .node {
+  stroke: none;
+  stroke-width: 0;
+}
+
+a:focus, a:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.node-text {
+  fill: #eafcff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-shadow: 0 0 5px #00aaff;
+  pointer-events: none;
+  font-family:Georgia, 'Times New Roman', Times, serif ;
+}
+
+.node-text-1{
+  fill: #eafcff;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-shadow: 0 0 5px #00aaff;
+  pointer-events: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+svg line {
+  stroke: #102542 !important;
+}
+
+svg symbol path {
+  fill: #21d4fd !important;
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  svg {
+    transform: scale(0.8);
+    transform-origin: center;
+  }
+
+  .node, .home-node {
+    stroke-width: 1.5;
+  }
+
+  .node-text {
+    font-size: 14px;
+  }
+
+  .line {
+    stroke-width: 2.5;
+  }
+}
+
+@media (max-width: 480px) {
+  svg {
+    transform: scale(0.6);
+  }
+
+  .node-text {
+    font-size: 12px;
+  }
+
+  .line {
+    stroke-width: 2;
+  }
+}
