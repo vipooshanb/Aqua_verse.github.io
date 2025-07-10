@@ -1466,6 +1466,12 @@ footer {
   color: #ffffff;
   font-weight: 600;
 }
+.active{
+  background: rgba(0, 212, 255, 0.5);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 212, 255, 0.3);
+}
 
 /* Smooth scrolling for anchor links */
 html {
