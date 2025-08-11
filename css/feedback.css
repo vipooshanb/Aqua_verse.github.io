@@ -1,21 +1,12 @@
 /*Feedback CSS*/
 body {
     font-family: 'Quicksand', Arial, Helvetica, sans-serif;
-    background-color: #000000bd;
     padding: 0;
     margin: 0;
+    background-color: white;
 }
 
-#bg-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    min-width: 100vw;
-    min-height: 100vh;
-    z-index: -1;
-    object-fit: cover;
-    opacity: 0.6;
-}
+
 
 .feedback-container {
     background: rgba(255,255,255,0.95);

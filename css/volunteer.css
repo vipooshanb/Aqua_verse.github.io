@@ -9,10 +9,13 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
+
+
 /*Main Page - Volunteer */
 
 .volunteer-main-section {
-    background-image: url('Images/bg.png');
+    background-image: url('Images/volimage.jpg');
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -50,6 +53,7 @@
     margin-bottom: 2.5rem;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
     font-weight: bold;
+    color: black;
 }
     
 .volunteer-main-button {
