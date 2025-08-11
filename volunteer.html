@@ -10,6 +10,10 @@
 </head>
 <body>
 <!-- Navigation bar - Student 02  -->
+   <!-- WhatsApp Button -->
+  <a href="https://wa.me/94772620357" class="whatsapp-button" aria-label="Contact us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
   <!-- Navigation -->
   <header id="Home">
     <nav class="navbar">
@@ -691,46 +695,202 @@
         </div>
     </section>
 
-            <p class="top-button"><a href="#"><i class="fas fa-arrow-up"></i> Back to Top</a></p>
+            <p class="top-button"><a href="#Home"><i class="fas fa-arrow-up"></i> Back to Top</a></p>
 
-<!-- Footer section - Student 02 -->
-        <footer>
-            <div class="footer-container">
-            <!-- Student Page Editors - LEFT -->
-            <div class="student-editors">
-                <h3>Page Editors</h3>
-                <div class="editor-links">
-                <a href="pageEditor_ST1.html" class="editor-link">Student 1 - B.Vipooshan</a>
-                <a href="pageEditor_ST2.html" class="editor-link">Student 2 - T.Dinojan</a>
-                <a href="pageEditor_ST3.html" class="editor-link">Student 3 - M.N.M.Riyas</a>
-                <a href="pageEditor_ST4.html" class="editor-link">Student 4 - Vishalini.K</a>
-                </div>
-            </div>
-            
-            <!-- Main footer content-->
-            <div class="footer-content">
-                <h2>AquaVerse</h2>
-                <p class="tagline">"Your voice can echo underwater. Join Aquaverse."</p>
-                <p class="description">Make waves with us and become part of the movement to protect our oceans. Together, we can create a sustainable future for marine life and preserve the beauty of our underwater world.</p>
-                <div class="social-icons">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com/zen_coders_x?igsh=MWdoOG92MzdldnMxag==" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            
-            <!-- Page edit by -->
-            <div class="page-credit">
-                <h3>Page Credit</h3>
-                <p>This page was edited by <a href="pageEditor_ST1.html" class="editor-link">B.Vipooshan</a></p>
-            </div>
-            </div>
-            
-            <!-- Copyright section -->
-            <div class="footer-bottom">
-            <p>&copy; 2025 AquaVerse | All Rights Reserved</p>
-            </div>
-        </footer>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <!-- Student Page Editors - LEFT -->
+      <div class="student-editors">
+        <h3>Page Editors</h3>
+        <div class="editor-links">
+          <a href="pageEditor_ST1.html" class="editor-link">Student 1</a>
+          <a href="pageEditor_ST2.html" class="editor-link">Student 2</a>
+          <a href="pageEditor_ST3.html" class="editor-link">Student 3</a>
+          <a href="pageEditor_ST4.html" class="editor-link">Student 4</a>
+        </div>
+      </div>
+      
+      <!-- Main footer content - CENTER -->
+      <div class="footer-content">
+        <h2>AquaVerse</h2>
+        <p class="tagline">"Your voice can echo underwater. Join Aquaverse."</p>
+        <p class="description">Make waves with us and become part of the movement to protect our oceans. Together, we can create a sustainable future for marine life and preserve the beauty of our underwater world.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/zen_coders_x?igsh=MWdoOG92MzdldnMxag==" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="footer-page-credit">
+          <p>Page designed by <a href="pageEditor_ST3.html" class="designer-name">T.Dinojan</a></p>
+        </div>
+      </div>
+      
+      <!-- Page Credit - RIGHT -->
+    </div>
+    
+    <!-- Copyright section -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 AquaVerse | All Rights Reserved | Edit - <a href="pageEditor_ST1.html" class="page-edit">B.VIpooshan</a></p>
+    </div>
+  </footer>
+  
+  <!-- Go to Top Button -->
+  <a href="#home" class="go-to-top" id="goToTop"><i class="fas fa-arrow-up"></i></a>
+  
 
+  <script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navMenu = document.getElementById('navMenu');
+
+    if (mobileMenuBtn && navMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        mobileMenuBtn.innerHTML = navMenu.classList.contains('active') ? 
+          '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        const isExpanded = navMenu.classList.contains('active');
+        mobileMenuBtn.setAttribute('aria-expanded', isExpanded);
+      });
+    }
+
+    // Navbar scroll effect and Go to top button
+    const navbar = document.querySelector('.navbar');
+    const goToTopBtn = document.querySelector('.top-button');
+    
+    window.addEventListener('scroll', () => {
+      // Navbar scroll effect
+      if (navbar) {
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      }
+      
+      // Go to top button visibility
+      if (goToTopBtn) {
+        if (window.pageYOffset > 300) {
+          goToTopBtn.style.opacity = '1';
+          goToTopBtn.style.visibility = 'visible';
+        } else {
+          goToTopBtn.style.opacity = '0';
+          goToTopBtn.style.visibility = 'hidden';
+        }
+      }
+    });
+
+    // Highlight active nav link
+    const navLinks = document.querySelectorAll('.nav-link');
+    const currentPage = window.location.pathname.split('/').pop();
+    navLinks.forEach(link => {
+      const linkPage = link.getAttribute('href');
+      if (
+        (currentPage === '' && linkPage === 'volunteer.html') ||
+        (currentPage === linkPage) ||
+        (currentPage === 'volunteer.html' && linkPage === 'volunteer.html')
+      ) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Form submission handling (if forms exist)
+    const forms = document.querySelectorAll('form');
+    forms.forEach(form => {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const name = form.querySelector('#name');
+        const rating = form.querySelector('input[name="rating"]:checked') || 
+                      document.querySelector('.emoji-option.active');
+        
+        if (name && !name.value.trim()) {
+          alert('Please enter your name.');
+          name.focus();
+          return;
+        }
+        
+        if (!rating) {
+          alert('Please select a rating.');
+          return;
+        }
+        
+        // Success message
+        alert('Thank you for your feedback! Your review has been submitted.');
+        form.reset();
+        document.querySelectorAll('.emoji-option').forEach(btn => btn.classList.remove('active'));
+      });
+    });
+
+    // Emoji rating functionality
+    const emojiButtons = document.querySelectorAll('.emoji-option');
+    emojiButtons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        // Remove active class from all buttons
+        emojiButtons.forEach(btn => btn.classList.remove('active'));
+        
+        // Add active class to clicked button
+        button.classList.add('active');
+      });
+    });
+
+    // Dropdown functionality
+    const sortDropdown = document.getElementById('sortDropdown');
+    if (sortDropdown) {
+      sortDropdown.addEventListener('change', () => {
+        const selectedValue = sortDropdown.value;
+        console.log(`Sorting by: ${selectedValue}`);
+        // Note: In a real application, you would implement actual sorting logic here
+      });
+    }
+
+    // Animation on scroll
+    function animateOnScroll() {
+      const elements = document.querySelectorAll('.program-card, .review-card, .left-panel, .right-panel');
+      elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 150;
+        
+        if (elementTop < window.innerHeight - elementVisible) {
+          element.classList.add('animate');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', animateOnScroll);
+    window.addEventListener('load', animateOnScroll);
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      animateOnScroll();
+      
+      // Set current page as active
+      const currentPath = window.location.pathname;
+      if (currentPath.includes('volunteer')) {
+        const volunteerLink = document.querySelector('a[href="volunteer.html"]');
+        if (volunteerLink) {
+          volunteerLink.classList.add('active');
+        }
+      }
+    });
+  </script>
 </body>
 </html>
