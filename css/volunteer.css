@@ -88,7 +88,6 @@ body::before {
 /*Main Page - Volunteer */
 
 .volunteer-main-section {
-    background-image: url('Images/back.jpg');
     height: 100vh;
     background-size: cover;
     background-position: center;
