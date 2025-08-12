@@ -9,6 +9,28 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    background: #0f172a;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(147, 51, 234, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+    z-index: -1;
+}
+
 /* WhatsApp Button */
 .whatsapp-button {
     position: fixed;
@@ -66,7 +88,7 @@
 /*Main Page - Volunteer */
 
 .volunteer-main-section {
-    background-image: url('Images/volimage.jpg');
+    background-image: url('Images/back.jpg');
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -76,6 +98,7 @@
     align-items: center;
     position: relative;
     overflow: hidden;
+    filter: brightness(0.6);
 }
     
 .volunteer-main-content {
@@ -149,7 +172,7 @@
 
 .volunteer-section-head h1 {
     font-size: 2.5rem;         
-    color: #000000;
+    color: #fff;
     letter-spacing: 1px;
 }
 /*--------------------------------------------*/
@@ -230,7 +253,7 @@
 .program-card {
     flex: 0 0 calc(25% - 2rem);
     max-width: calc(25% - 2rem);
-    background-color: #1417e510;
+    background-color: #fafdff;
     border-radius: 18px;
     overflow: hidden;
     box-shadow: 0 10px 24px rgba(7, 42, 156, 0.12);
@@ -421,14 +444,13 @@ text-decoration: none;
 /*--------------------------------------------*/
 /* Overall Rating section & Feedback */
 .feed {
-    background-color: #a9cfe225;
+    background-color: #ffffffd8;
     color: #333;
     min-height: 100vh;
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50px;
 }
 
 .container {
@@ -703,7 +725,7 @@ textarea {
 }
 /* Reviews Section */
 .reviews{
-    background: #f8f9fb;
+    background: #fafdff;
     color: #333;
     padding: 20px;
     margin-bottom: 40px;

@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/table.css">
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet" >
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" >
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Top Underwater Experiences in Sri Lanka</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/table.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Pacifico&family=Quicksand&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body id="Home">
-    <!-- WhatsApp Button -->
+  <!-- WhatsApp Button -->
   <a href="https://wa.me/94772620357" class="whatsapp-button" aria-label="Contact us on WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
-    <!-- Navigation -->
-  <header id="Home">
+    <header id="Home">
     <nav class="navbar">
       <div class="nav-container">
         <div class="nav-logo">
@@ -40,131 +39,158 @@
       </div>
     </nav>
   </header>
-  <div class="table-flex">
-    <div class="table">
-      <h1>Top Underwater Experience Places in Sri Lanka</h1>
-      
-      <!-- Top left image -->
-      <div class="table-image top-left">
-        <img src="Images/pigeon-island-national-park-sri-lanka.webp" alt="Pigeon Island" class="table-img">
-        <p class="image-name">Pigeon Island National Park</p>
-      </div>
-      
-      <!-- Top right image -->
-      <div class="table-image top-right">
-        <img src="Images/Hikkaduwa.jpg" alt="Hikkaduwa" class="table-img">
-        <p class="image-name">Hikkaduwa Marine Park</p>
-      </div>
-      
-      <!-- Left side image -->
-      <div class="table-image left-side">
-        <img src="Images/mirissa-beach-sri-lanka-1.jpg" alt="Mirissa Beach" class="table-img">
-        <p class="image-name">Mirissa Beach</p>
-      </div>
-      
-      <!-- Right side image -->
-      <div class="table-image right-side">
-        <img src="Images/WoC-Unawatuna-Beach-Featured.webp" alt="Unawatuna Beach" class="table-img">
-        <p class="image-name">Unawatuna Beach</p>
-      </div>
-      
-      <!-- Bottom left image -->
-      <div class="table-image bottom-left">
-        <img src="Images/pasikudah-beach-you-would.jpg" alt="Pasikudah Beach" class="table-img">
-        <p class="image-name">Pasikudah Beach</p>
-      </div>
-      
-      <!-- Bottom right image -->
-      <div class="table-image bottom-right">
-        <img src="Images/Sri-Lanka-Wreck-diving-capital-of-the-Indian-Ocean-slider-2.jpg" alt="Batticaloa ship wrecks" class="table-img">
-        <p class="image-name">Batticaloa Shipwrecks</p>
-      </div>
-      
-      <!-- Center table -->
-      <div class="table-center">
-        <table>
+
+  <div class="site-bg" aria-hidden="true">
+    <div class="bg-gradient"></div>
+    <div class="bubbles" aria-hidden="true">
+      <span class="bubble"></span>
+      <span class="bubble"></span>
+      <span class="bubble"></span>
+      <span class="bubble"></span>
+      <span class="bubble"></span>
+      <span class="bubble"></span>
+      <span class="bubble"></span>
+      <span class="bubble"></span>
+      <span class="bubble"></span>
+      <span class="bubble"></span>
+      <span class="bubble"></span>
+      <span class="bubble"></span>
+    </div>
+  </div>
+    <!-- Navigation -->
+
+  <main class="table-section" aria-labelledby="destinations-title">
+    <header class="table-header">
+      <h1 id="destinations-title">Top Underwater Experiences in Sri Lanka</h1>
+      <p class="lead">Explore Sri Lanka’s best snorkeling and diving spots. Search, sort, and browse on any screen size.</p>
+
+      <form class="table-tools" role="search" aria-label="Search destinations" onsubmit="return false;">
+        <label class="sr-only" for="search-input">Search</label>
+        <input id="search-input" class="input" type="search" placeholder="Search by place, highlights, or season…" aria-describedby="search-help" />
+        <span id="search-help" class="sr-only">Type to filter table rows</span>
+
+        <div class="filters">
+          <label>
+            <span class="sr-only">Filter by type</span>
+            <select id="filter-type" class="select">
+              <option value="">All types</option>
+              <option>Snorkeling</option>
+              <option>Snorkeling & Diving</option>
+              <option>Snorkeling & Boat rides</option>
+              <option>Scuba Diving</option>
+              <option>Wreck Diving</option>
+              <option>Snorkeling & Whale Watching</option>
+              <option>Beginner Snorkeling</option>
+            </select>
+          </label>
+          <label>
+            <span class="sr-only">Filter by season</span>
+            <select id="filter-season" class="select">
+              <option value="">All seasons</option>
+              <option>May to September</option>
+              <option>November to April</option>
+            </select>
+          </label>
+        </div>
+
+        <output id="result-count" class="result-count" aria-live="polite">8 results</output>
+      </form>
+    </header>
+
+    <div class="table-card">
+      <div class="table-responsive">
+        <table class="data-table" id="destinations-table">
           <thead>
             <tr>
-              <th>Place</th>
-              <th>Best For</th>
-              <th>Highlights</th>
-              <th>Season</th>
-              <th>Map</th>
+              <th scope="col">Photo</th>
+              <th scope="col" data-sort="text">Place</th>
+              <th scope="col" data-sort="text">Best For</th>
+              <th scope="col" data-sort="text">Highlights</th>
+              <th scope="col" data-sort="text">Season</th>
+              <th scope="col">Map</th>
             </tr>
           </thead>
           <tbody>
             <tr>
+              <td data-label="Photo"><img class="thumb" src="Images/pigeon-island-national-park-sri-lanka.webp" alt="Pigeon Island" /></td>
               <td data-label="Place">Pigeon Island (Trincomalee)</td>
               <td data-label="Best For">Snorkeling</td>
               <td data-label="Highlights">Coral reefs, blacktip reef sharks, colorful reef fish</td>
               <td data-label="Season">May to September</td>
-              <td data-label="Map" class="map"><a href="https://maps.app.goo.gl/V55mGXVPu9CQuCAq7">Click here</a></td>
+              <td data-label="Map"><a class="map-link" href="https://maps.app.goo.gl/V55mGXVPu9CQuCAq7" target="_blank" rel="noopener">Open</a></td>
             </tr>
             <tr>
+              <td data-label="Photo"><img class="thumb" src="Images/school_of_tropical_fish_swimming.jpg" alt="Bar Reef (Kalpitiya)" /></td>
               <td data-label="Place">Bar Reef (Kalpitiya)</td>
               <td data-label="Best For">Snorkeling & Diving</td>
               <td data-label="Highlights">Largest coral reef, dolphins, manta rays</td>
               <td data-label="Season">November to April</td>
-              <td data-label="Map"><a href="https://maps.app.goo.gl/SV6PEbk2NgKhfdwe9">Click here</a></td>
+              <td data-label="Map"><a class="map-link" href="https://maps.app.goo.gl/SV6PEbk2NgKhfdwe9" target="_blank" rel="noopener">Open</a></td>
             </tr>
             <tr>
+              <td data-label="Photo"><img class="thumb" src="Images/Hikkaduwa.jpg" alt="Hikkaduwa Marine Park" /></td>
               <td data-label="Place">Hikkaduwa Marine Park</td>
               <td data-label="Best For">Snorkeling & Boat rides</td>
               <td data-label="Highlights">Rich coral life, sea turtles, parrotfish</td>
               <td data-label="Season">November to April</td>
-              <td data-label="Map"><a href="https://maps.app.goo.gl/Fg7SPWhVFgWxpkQ1A">Click here</a></td>
+              <td data-label="Map"><a class="map-link" href="https://maps.app.goo.gl/Fg7SPWhVFgWxpkQ1A" target="_blank" rel="noopener">Open</a></td>
             </tr>
             <tr>
+              <td data-label="Photo"><img class="thumb" src="Images/WoC-Unawatuna-Beach-Featured.webp" alt="Unawatuna & Galle" /></td>
               <td data-label="Place">Unawatuna & Galle</td>
               <td data-label="Best For">Scuba Diving</td>
               <td data-label="Highlights">Shipwrecks, coral gardens, reef fish</td>
               <td data-label="Season">November to April</td>
-              <td data-label="Map"><a href="https://maps.app.goo.gl/RnjgrX6UrFCm1QDc6">Click here</a></td>
+              <td data-label="Map"><a class="map-link" href="https://maps.app.goo.gl/RnjgrX6UrFCm1QDc6" target="_blank" rel="noopener">Open</a></td>
             </tr>
             <tr>
+              <td data-label="Photo"><img class="thumb" src="Images/underwater-drone.jpg" alt="Taprobane North Wreck (Colombo)" /></td>
               <td data-label="Place">Taprobane North Wreck (Colombo)</td>
               <td data-label="Best For">Wreck Diving</td>
               <td data-label="Highlights">WWII sunken ship, marine life</td>
               <td data-label="Season">November to April</td>
-              <td data-label="Map"><a href="https://maps.app.goo.gl/w8LatEqGbwoG2pxa9">Click here</a></td>
+              <td data-label="Map"><a class="map-link" href="https://maps.app.goo.gl/w8LatEqGbwoG2pxa9" target="_blank" rel="noopener">Open</a></td>
             </tr>
             <tr>
+              <td data-label="Photo"><img class="thumb" src="Images/mirissa-beach-sri-lanka-1.jpg" alt="Mirissa" /></td>
               <td data-label="Place">Mirissa</td>
               <td data-label="Best For">Snorkeling & Whale Watching</td>
               <td data-label="Highlights">Turtles, dolphins</td>
               <td data-label="Season">November to April</td>
-              <td data-label="Map"><a href="https://maps.app.goo.gl/ycVV14Va6tfoTDUm6">Click here</a></td>
+              <td data-label="Map"><a class="map-link" href="https://maps.app.goo.gl/ycVV14Va6tfoTDUm6" target="_blank" rel="noopener">Open</a></td>
             </tr>
             <tr>
+              <td data-label="Photo"><img class="thumb" src="Images/Sri-Lanka-Wreck-diving-capital-of-the-Indian-Ocean-slider-2.jpg" alt="Batticaloa Shipwrecks" /></td>
               <td data-label="Place">Batticaloa Shipwrecks</td>
               <td data-label="Best For">Wreck Diving</td>
               <td data-label="Highlights">Sunken ships, marine biodiversity</td>
               <td data-label="Season">May to September</td>
-              <td data-label="Map"><a href="https://maps.app.goo.gl/ZJ99WuqBtAPbNs1h8">Click here</a></td>
+              <td data-label="Map"><a class="map-link" href="https://maps.app.goo.gl/ZJ99WuqBtAPbNs1h8" target="_blank" rel="noopener">Open</a></td>
             </tr>
             <tr>
+              <td data-label="Photo"><img class="thumb" src="Images/pasikudah-beach-you-would.jpg" alt="Passikudah" /></td>
               <td data-label="Place">Passikudah</td>
               <td data-label="Best For">Beginner Snorkeling</td>
               <td data-label="Highlights">Shallow coral gardens, calm water</td>
               <td data-label="Season">May to September</td>
-              <td data-label="Map"><a href="https://maps.app.goo.gl/5g8sJgmt46hwqhRz8">Click here</a></td>
+              <td data-label="Map"><a class="map-link" href="https://maps.app.goo.gl/5g8sJgmt46hwqhRz8" target="_blank" rel="noopener">Open</a></td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
-  </div>
-
+  </main>
+            <!-- Footer -->
   <footer>
     <div class="footer-container">
       <!-- Student Page Editors - LEFT -->
       <div class="student-editors">
         <h3>Page Editors</h3>
         <div class="editor-links">
-          <a href="pageEditor_ST1.html" class="editor-link">Student 1 </a>
-          <a href="pageEditor_ST2.html" class="editor-link">Student 2 </a>
-          <a href="pageEditor_ST3.html" class="editor-link">Student 3 </a>
-          <a href="pageEditor_ST4.html" class="editor-link">Student 4 </a>
+          <a href="pageEditor_ST1.html" class="editor-link">Student 1</a>
+          <a href="pageEditor_ST2.html" class="editor-link">Student 2</a>
+          <a href="pageEditor_ST3.html" class="editor-link">Student 3</a>
+          <a href="pageEditor_ST4.html" class="editor-link">Student 4</a>
         </div>
       </div>
       
@@ -172,19 +198,18 @@
       <div class="footer-content">
         <h2>AquaVerse</h2>
         <p class="tagline">"Your voice can echo underwater. Join Aquaverse."</p>
-        <p class="description">Make waves with us </p>
+        <p class="description">Make waves with us and become part of the movement to protect our oceans. Together, we can create a sustainable future for marine life and preserve the beauty of our underwater world.</p>
         <div class="social-icons">
           <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
           <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
           <a href="https://www.instagram.com/zen_coders_x?igsh=MWdoOG92MzdldnMxag==" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         </div>
+                <div class="footer-page-credit">
+          <p>Page designed by <a href="pageEditor_ST2.html" class="designer-name">T.Dinojan</a></p>
+        </div>
       </div>
       
       <!-- Page Credit - RIGHT -->
-      <div class="page-credit">
-        <h3>Page Credit</h3>
-        <p>This page was edited by <a href="pageEditor_ST2.html" class="editor-link">Mr.T.Dinojan</a></p>
-      </div>
     </div>
     
     <!-- Copyright section -->
@@ -192,6 +217,51 @@
       <p>&copy; 2025 AquaVerse | All Rights Reserved</p>
     </div>
   </footer>
-  <a href="#Home" class="go-to-top">↑</a>
+  
+  <!-- Go to Top Button -->
+    <a href="#home" class="go-to-top" id="goToTop"><i class="fas fa-arrow-up"></i></a>
+
+
+
+  <script src="js/table.js" defer></script>
+  <script>
+    // Mobile Menu Toggle (copied from team.html)
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navMenu = document.getElementById('navMenu');
+    if (mobileMenuBtn && navMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        mobileMenuBtn.innerHTML = navMenu.classList.contains('active') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        mobileMenuBtn.setAttribute('aria-expanded', navMenu.classList.contains('active'));
+      });
+    }
+    // Highlight active nav link
+    const navLinks = document.querySelectorAll('.nav-link');
+    const currentPage = window.location.pathname.split('/').pop();
+    navLinks.forEach(link => {
+      const linkPage = link.getAttribute('href');
+      if (
+        (currentPage === '' && linkPage === 'table.html') ||
+        (currentPage === linkPage)
+      ) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+        // Go to Top button functionality
+        const goToTopBtn = document.getElementById('goToTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                goToTopBtn.classList.add('active');
+            } else {
+                goToTopBtn.classList.remove('active');
+            }
+        });
+        goToTopBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+  </script>
 </body>
 </html>

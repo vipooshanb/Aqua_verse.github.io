@@ -1,3 +1,38 @@
+/* WhatsApp Button */
+.whatsapp-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 30px;
+  box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+  z-index: 100;
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+}
+.whatsapp-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+  animation: none;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
 
 :root {
@@ -13,25 +48,27 @@
 
 body {
   font-family: 'Quicksand', sans-serif;
-  background: var(--aqua);
+  background: #0f172a;
   color: #fff;
   margin: 0;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 #bgVideo {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100vw; height: 100vh;
-  object-fit: cover;
-  z-index: -2;
-  filter: brightness(40%) blur(2px);
+  /* Remove background video for team-style background */
 }
 body::before {
   content: '';
   position: fixed;
-  inset: 0;
-  background: linear-gradient(120deg, rgba(10,35,66,0.7), rgba(0,180,216,0.2));
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(147, 51, 234, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
   z-index: -1;
 }
 
@@ -48,6 +85,12 @@ body::before {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: fixed;
+  top: 70px; /* height of main navbar */
+  left: 0;
+  height: calc(100vh - 70px);
+  z-index: 900;
+  overflow: hidden;
 }
 .nav-logo-1 img {
   width: 48px;
@@ -81,7 +124,7 @@ body::before {
 
 .main-content {
   flex: 1;
-  padding: 48px 5vw;
+  padding: 48px 5vw 48px 120px; /* left padding for side navbar */
   max-width: 1200px;
   margin: auto;
   display: flex;
@@ -237,22 +280,29 @@ body::before {
   background: #a4161a;
 }
 
+
 @media (max-width: 900px) {
   .layout {
-    flex-direction: column;
+    flex-direction: row;
   }
   .nav-bar-1 {
-    flex-direction: row;
-    height: 60px;
-    width: 100%;
-    padding: 0 12px;
+    width: 60px;
+    min-width: 60px;
+    height: calc(100vh - 60px);
+    flex-direction: column;
+    padding: 16px 0;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    z-index: 900;
+    overflow: hidden;
   }
   .nav-links {
-    flex-direction: row;
+    flex-direction: column;
     gap: 18px;
   }
   .main-content {
-    padding: 24px 2vw;
+    padding: 16px 2vw 16px 90px;
   }
   .hero {
     flex-direction: column;

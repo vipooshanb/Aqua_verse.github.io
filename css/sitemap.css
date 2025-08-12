@@ -1,9 +1,46 @@
+footer {
+  padding-bottom: 0 !important;
+}
+/* WhatsApp Button */
+.whatsapp-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 30px;
+  box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+  z-index: 100;
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+}
+.whatsapp-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+  animation: none;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
 /* Sitemap-specific styles */
 
 
 body {
-  background: url('pexels-francesco-ungaro-3324590.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background: #0f172a;
   font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
   padding-top: 100px;
@@ -14,7 +51,10 @@ body::before {
   content: '';
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(162, 218, 247, 0.468);
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(147, 51, 234, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
   z-index: 0;
   pointer-events: none;
 }
@@ -38,13 +78,13 @@ body::before {
   -webkit-backdrop-filter: blur(5px); /* For Safari */
   width: fit-content; /* Adjust width to content */
   padding: 10px;
-  font-size: 50px;
+  font-size: 32px;
 }
 
 svg {
   display: block;
   margin: 20px auto;
-  max-width: 90%;
+  max-width: 60%;
   height: auto;
   min-height: 300px;
 }
@@ -79,7 +119,7 @@ a:focus, a:active {
 
 .node-text {
   fill: #eafcff;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 500;
   text-shadow: 0 0 5px #00aaff;
   pointer-events: none;
@@ -88,7 +128,7 @@ a:focus, a:active {
 
 .node-text-1{
   fill: #eafcff;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-weight: 500;
   text-shadow: 0 0 5px #00aaff;
   pointer-events: none;
