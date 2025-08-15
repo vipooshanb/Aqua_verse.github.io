@@ -503,7 +503,7 @@
         left: -100%;
         width: 100%;
         height: calc(100vh - 60px);
-        background: rgba(3, 4, 94, 0.95);
+        background: rgba(255,255,255,0.05); /* transparent background */
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         flex-direction: column;
