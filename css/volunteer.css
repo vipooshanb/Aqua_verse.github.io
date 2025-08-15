@@ -824,12 +824,24 @@ object-fit: cover;
         flex: 0 0 calc(33.333% - 2rem);
         max-width: calc(33.333% - 2rem);
     }
+    .a-programs-title {
+        font-size: 2rem;
+    }
 }
 
 @media (max-width: 900px) {
     .program-card {
         flex: 0 0 calc(50% - 2rem);
         max-width: calc(50% - 2rem);
+    }
+    .volunteer-main-title {
+        font-size: 2.5rem;
+    }
+    .volunteer-main-content {
+        padding: 1rem;
+    }
+    .volunteer-section-head h1 {
+        font-size: 2rem;
     }
 }
 
@@ -839,9 +851,96 @@ object-fit: cover;
         max-width: 100%;
     }
     .programs-grid {
-        padding-left: 10px;
-        padding-right: 10px;
-        gap: 1rem;
+        padding-left: 5px;
+        padding-right: 5px;
+        gap: 0.5rem;
+    }
+    .volunteer-main-title {
+        font-size: 2rem;
+    }
+    .volunteer-main-description {
+        font-size: 1rem;
+    }
+    .volunteer-main-content {
+        padding: 0.5rem;
+    }
+    .volunteer-section-head h1 {
+        font-size: 1.5rem;
+    }
+    .a-programs-title {
+        font-size: 1.5rem;
+    }
+    .reviews-section h3 {
+        font-size: 1.5rem;
+    }
+    .review-card {
+        min-width: 220px;
+        max-width: 95vw;
+        padding: 12px;
+    }
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-content h2 {
+        font-size: 1.2rem;
+    }
+    .footer-content .tagline {
+        font-size: 0.9rem;
+    }
+    .footer-content .description {
+        font-size: 0.85rem;
+    }
+    .student-editors h3 {
+        font-size: 1rem;
+    }
+    .editor-link {
+        font-size: 0.9rem;
+    }
+    .footer-bottom {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .volunteer-main-title {
+        font-size: 1.2rem;
+    }
+    .volunteer-main-description {
+        font-size: 0.9rem;
+    }
+    .volunteer-main-button {
+        font-size: 0.9rem;
+        padding: 10px 18px;
+    }
+    .volunteer-section-head h1,
+    .a-programs-title,
+    .reviews-section h3 {
+        font-size: 1.1rem;
+    }
+    .review-card {
+        min-width: 160px;
+        max-width: 98vw;
+        padding: 8px;
+    }
+    .footer-content h2 {
+        font-size: 1rem;
+    }
+    .footer-content .tagline {
+        font-size: 0.8rem;
+    }
+    .footer-content .description {
+        font-size: 0.7rem;
+    }
+    .student-editors h3 {
+        font-size: 0.9rem;
+    }
+    .editor-link {
+        font-size: 0.8rem;
+    }
+    .footer-bottom {
+        font-size: 0.7rem;
     }
 }
 /*--------------------------------------------*/
