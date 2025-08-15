@@ -450,7 +450,7 @@ body::before {
         padding: 0 8px;
     }
     .header {
-        padding: 60px 0 40px;
+        padding: 100px 0 40px;
     }
     .team-grid-wrapper {
         overflow-x: auto;
@@ -489,7 +489,7 @@ body::before {
 
 @media (max-width: 480px) {
     .header {
-        padding: 40px 0 20px;
+        padding: 90px 0 20px;
     }
     .team-grid-wrapper {
         padding-bottom: 0;
