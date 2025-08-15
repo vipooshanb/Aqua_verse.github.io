@@ -78,46 +78,46 @@
                     </div>
                 </fieldset>
 
-                <fieldset>
-                    <legend>Feedback Details</legend>
+        <fieldset>
+          <legend>Feedback Details</legend>
 
-                    <label>Rate our website:</label>
-                    <div class="radio-group">
-                        <label><input type="radio" name="rating" value="5" required> Excellent </label>
-                        <label><input type="radio" name="rating" value="4"> Very Good </label>
-                        <label><input type="radio" name="rating" value="3"> Good </label>
-                        <label><input type="radio" name="rating" value="2"> Fair </label>
-                        <label><input type="radio" name="rating" value="1"> Poor </label>
-                    </div>
+          <label>Rate our website:</label>
+          <div class="radio-group">
+            <label><input type="radio" name="rating" value="5" required> Excellent </label>
+            <label><input type="radio" name="rating" value="4"> Very Good </label>
+            <label><input type="radio" name="rating" value="3"> Good </label>
+            <label><input type="radio" name="rating" value="2"> Fair </label>
+            <label><input type="radio" name="rating" value="1"> Poor </label>
+          </div>
 
-                    <label>Visual Rating:</label>
-                    <div class="emoji-rating">
-                        <label><input type="radio" name="emojiRate" value="😍"> 😍</label>
-                        <label><input type="radio" name="emojiRate" value="😊"> 😊</label>
-                        <label><input type="radio" name="emojiRate" value="😐"> 😐</label>
-                        <label><input type="radio" name="emojiRate" value="😢"> 😢</label>
-                    </div>
+          <label>Visual Rating:</label>
+          <div class="emoji-rating">
+            <label><input type="radio" name="emojiRate" value="😍"> 😍</label>
+            <label><input type="radio" name="emojiRate" value="😊"> 😊</label>
+            <label><input type="radio" name="emojiRate" value="😐"> 😐</label>
+            <label><input type="radio" name="emojiRate" value="😢"> 😢</label>
+          </div>
 
-                    <label>What features did you like?</label>
-                    <div class="checkbox-group">
-                        <label><input type="checkbox" name="features" value="Design"> Design</label>
-                        <label><input type="checkbox" name="features" value="Speed"> Speed</label>
-                        <label><input type="checkbox" name="features" value="Content"> Content</label>
-                        <label><input type="checkbox" name="features" value="Navigation"> Navigation</label>
-                    </div>
+          <label>What features did you like?</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="features" value="Design"> Design</label>
+            <label><input type="checkbox" name="features" value="Speed"> Speed</label>
+            <label><input type="checkbox" name="features" value="Content"> Content</label>
+            <label><input type="checkbox" name="features" value="Navigation"> Navigation</label>
+          </div>
 
-                    <label for="comments">Your Comments:</label>
-                    <textarea id="comments" name="comments" rows="4" maxlength="500" placeholder="Your Feedback" required title="Leave your feedback here"></textarea>
+          <label for="comments">Your Comments:</label>
+          <textarea id="comments" name="comments" rows="4" maxlength="500" placeholder="Your Feedback" required title="Leave your feedback here"></textarea>
+        </fieldset>
 
-                </fieldset>
-                    <legend>Upload & Schedule</legend>
+        <fieldset>
+          <legend>Upload & Schedule</legend>
+          <label for="fileUpload">Attach a File (Optional):</label>
+          <input type="file" id="fileUpload" name="fileUpload" accept=".jpg,.jpeg,.png,.pdf">
 
-                    <label for="fileUpload">Attach a File (Optional):</label>
-                    <input type="file" id="fileUpload" name="fileUpload" accept=".jpg,.jpeg,.png,.pdf">
-
-                    <label for="schedule">Preferred Feedback Time:</label>
-                    <input type="datetime-local" id="schedule" name="schedule" value="2025-06-18T10:30">
-                </fieldset>
+          <label for="schedule">Preferred Feedback Time:</label>
+          <input type="datetime-local" id="schedule" name="schedule" value="2025-06-18T10:30">
+        </fieldset>
 
                 <div class="button-group">
                   <button type="submit">Submit</button>
@@ -164,8 +164,6 @@
     </div>
   </footer>
   
-  <!-- Go to Top Button -->
-  <a href="#home" class="go-to-top" id="goToTop"><i class="fas fa-arrow-up"></i></a>
   
     </body>
     <script>
