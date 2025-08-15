@@ -1,3 +1,25 @@
+@media (max-width: 700px) {
+  .card, .card-short-bio, .availability-card, .contact-card {
+    width: 95vw;
+    max-width: 360px;
+    margin: 0 auto 12px auto;
+    box-sizing: border-box;
+  }
+  footer {
+    margin-left: 0 !important;
+    width: 100vw;
+    position: relative;
+    left: 0;
+  }
+}
+@media (min-width: 701px) {
+  footer {
+    margin-left: 80px; /* width of side navbar */
+    width: calc(100vw - 80px);
+    position: relative;
+    left: 0;
+  }
+}
 /* Extra mobile and tablet responsiveness for profile page */
 @media (max-width: 700px) {
   .main-content {
