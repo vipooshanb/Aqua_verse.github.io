@@ -97,7 +97,6 @@ body::before {
     align-items: center;
     position: relative;
     overflow: hidden;
-    filter: brightness(0.6);
 }
     
 .volunteer-main-content {
