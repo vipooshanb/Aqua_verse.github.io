@@ -82,9 +82,32 @@
                         <img src="Images/Aqua_Verse-logo.png" alt="AquaVerse Logo" class="nav-logo-img">
                     </a>
                 </div>
-                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation" aria-expanded="false">
-                    <i class="fas fa-bars"></i>
-                </button>
+                        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation" aria-expanded="false">
+                            <span class="menu-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </button>
+<style>
+    .menu-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+        gap: 4px;
+    }
+    .menu-icon span {
+        display: block;
+        width: 24px;
+        height: 3px;
+        background: #2563eb;
+        border-radius: 2px;
+        transition: all 0.3s;
+    }
+</style>
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="home.html" class="nav-link">Home</a></li>
                     <li><a href="team.html" class="nav-link">Team</a></li>
@@ -110,4 +133,28 @@
         <a href="login.html" class="switch-link">Already have an account? Log In</a>
     </div>
 </body>
+<script>
+    // Mobile Menu Toggle for Signin Page
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navMenu = document.getElementById('navMenu');
+    if (mobileMenuBtn && navMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+                    mobileMenuBtn.innerHTML = navMenu.classList.contains('active')
+                        ? '<i class="fas fa-times"></i>'
+                        : '<span class="menu-icon"><span></span><span></span><span></span></span>';
+            mobileMenuBtn.setAttribute('aria-expanded', navMenu.classList.contains('active'));
+        });
+        // Close menu when a nav link is clicked (for mobile UX)
+        navMenu.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768 && navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+    }
+</script>
 </html>
