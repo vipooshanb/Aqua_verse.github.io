@@ -219,10 +219,26 @@
         .team-card .member-role { font-size: 0.9rem; }
         .team-card .card-content { padding: 10px; }
         .team-card .member-description p, .team-card .tasks-list li { font-size: 0.8rem; }
+        .team-grid {
+          grid-template-columns: 1fr;
+          width: 90vw;
+          min-width: unset;
+          max-width: 350px;
+          margin: 0 auto;
+        }
+        .team-card {
+          width: 90vw;
+          max-width: 350px;
+          margin: 0 auto;
+        }
       }
       @media (max-width: 400px) {
         .team-card .member-name { font-size: 0.95rem; }
         .team-card .card-content { padding: 6px; }
+        .team-card, .team-grid {
+          width: 98vw;
+          max-width: 98vw;
+        }
       }
     </style>
           <!-- Footer -->
