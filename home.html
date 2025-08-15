@@ -242,21 +242,20 @@
     @media (max-width: 900px) {
       .hero-slide {
         background-attachment: scroll;
-        background-size: cover;
-        background-position: center top;
       }
     }
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       .hero-slide {
-        background-attachment: scroll;
-        background-size: cover;
-        background-position: top center;
-        min-height: 350px;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        background-position: center top !important;
+        background-attachment: scroll !important;
+        min-height: 300px;
         height: 100%;
       }
       .hero {
-        min-height: 350px;
-        height: 60vh;
+        min-height: 300px;
+        height: 50vh;
       }
     }
     
