@@ -302,6 +302,12 @@ body::before {
   display: flex;
   flex-direction: column;
   gap: 36px;
+  margin-top: 90px;
+}
+@media (max-width: 700px) {
+  .main-content {
+    margin-top: 70px;
+  }
 }
 
 .hero, .card, .card-short-bio {
