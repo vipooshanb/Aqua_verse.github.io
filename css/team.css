@@ -154,12 +154,19 @@ body::before {
     padding: 60px 0 100px;
 }
 
+.team-grid-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
 .team-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     max-width: 1300px;
     margin: 0 auto;
+    width: 100%;
+    min-width: 320px;
 }
 
 /* Team Card */
@@ -420,7 +427,6 @@ body::before {
         grid-template-columns: repeat(2, 1fr);
         gap: 25px;
     }
-    
     .card-image {
         height: 250px;
     }
@@ -431,11 +437,9 @@ body::before {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
-    
     .card-image {
         height: 220px;
     }
-    
     .main-title {
         font-size: 3rem;
     }
@@ -443,69 +447,100 @@ body::before {
 
 @media (max-width: 768px) {
     .container {
-        padding: 0 20px;
+        padding: 0 8px;
     }
-    
     .header {
-        padding: 80px 0 60px;
+        padding: 60px 0 40px;
     }
-    
+    .team-grid-wrapper {
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
     .team-grid {
         grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 20px;
+        min-width: 280px;
+        width: 100%;
     }
-    
     .main-title {
-        font-size: 2.5rem;
+        font-size: 2.1rem;
     }
-    
     .subtitle {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
-    
     .card-content {
-        padding: 20px;
+        padding: 14px;
     }
-    
     .logo-text {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+    }
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-content {
+        margin: 10px 0;
+    }
+    .student-editors {
+        margin-bottom: 10px;
     }
 }
 
 @media (max-width: 480px) {
     .header {
-        padding: 60px 0 40px;
+        padding: 40px 0 20px;
     }
-    
+    .team-grid-wrapper {
+        padding-bottom: 0;
+    }
     .team-grid {
-        gap: 20px;
+        grid-template-columns: 90vw;
+        gap: 16px;
+        min-width: 220px;
+        width: 100%;
+        overflow-x: auto;
     }
-    
     .main-title {
-        font-size: 2rem;
+        font-size: 1.3rem;
     }
-    
     .subtitle {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
-    
     .card-content {
-        padding: 18px;
+        padding: 10px;
     }
-    
     .card-image {
-        height: 200px;
+        height: 140px;
     }
-    
     .social-links {
-        gap: 12px;
+        gap: 8px;
     }
-    
     .social-link {
-        width: 35px;
-        height: 35px;
-        font-size: 0.9rem;
+        width: 30px;
+        height: 30px;
+        font-size: 0.8rem;
     }
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-content {
+        margin: 8px 0;
+    }
+    .student-editors {
+        margin-bottom: 8px;
+    }
+}
+/* Extra: Make footer flex for better mobile layout */
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
 }
     /* Go to Top Button */
     .go-to-top {
