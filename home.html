@@ -237,6 +237,28 @@
       opacity: 0;
       transition: opacity 1s ease-in-out;
     }
+
+    /* Responsive fix for hero-slide background images */
+    @media (max-width: 900px) {
+      .hero-slide {
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center top;
+      }
+    }
+    @media (max-width: 600px) {
+      .hero-slide {
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: top center;
+        min-height: 350px;
+        height: 100%;
+      }
+      .hero {
+        min-height: 350px;
+        height: 60vh;
+      }
+    }
     
     .hero-slide.active {
       opacity: 1;
