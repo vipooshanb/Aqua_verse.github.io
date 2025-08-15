@@ -10,12 +10,13 @@ html,body {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white;
     overflow: hidden;
+    min-height: 100vh;
 }
 
 .splash-container {
     background: url("Images/splash.jpg") no-repeat center center/cover;
     filter:brightness(70%);
-    height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,6 +24,7 @@ html,body {
     text-align: center;
     padding: 20px;
     animation: fadeIn 1s ease-in-out;
+    position: relative;
 }
 .main-title{
     font-size: 2rem;
@@ -41,12 +43,15 @@ html,body {
 }
 .footer {
     position: absolute;
+    left: 0;
+    right: 0;
     bottom: 20px;
     text-align: center;
     font-weight: bold;
     font-size: 1.5rem;
     color: rgb(255, 255, 255);
     animation: fadeIn 2s;
+    padding: 0 10px;
 }
 
 .web-mission {
@@ -54,6 +59,7 @@ html,body {
     font-size: 2rem;
     max-width: 80%;
     animation: fadeIn 2s ease-in-out;
+    word-break: break-word;
 }
 
 /* Animated progress bar */
@@ -115,5 +121,59 @@ html,body {
     40% { width: 45%; }
     60% { width: 70%; }
     80% { width: 85%; }
-100% { width: 100%; }
+    100% { width: 100%; }
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .title {
+        font-size: 2.5rem;
+    }
+    .main-title {
+        font-size: 1.3rem;
+    }
+    .web-mission {
+        font-size: 1.2rem;
+    }
+    .footer {
+        font-size: 1rem;
+    }
+    .progress-container {
+        max-width: 200px;
+    }
+    .loader div {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .splash-container {
+        padding: 10px;
+    }
+    .title {
+        font-size: 1.5rem;
+    }
+    .main-title {
+        font-size: 1rem;
+    }
+    .web-mission {
+        font-size: 1rem;
+        max-width: 95%;
+    }
+    .footer {
+        font-size: 0.8rem;
+        padding: 0 2px;
+    }
+    .progress-container {
+        max-width: 120px;
+    }
+    .loader {
+        gap: 6px;
+        margin-top: 30px;
+    }
+    .loader div {
+        width: 8px;
+        height: 8px;
+    }
 }
