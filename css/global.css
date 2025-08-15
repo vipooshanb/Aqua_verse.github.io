@@ -384,6 +384,11 @@
       text-align: center;
       width: 100%;
     }
+    .footer-bottom a{
+      text-decoration: none;
+      font-weight: bold;
+      color: #e2f3fd;
+    }
     
     .page-edit {
       color: #e2f3fd;
