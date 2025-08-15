@@ -150,6 +150,9 @@ html,body {
 @media (max-width: 600px) {
     .splash-container {
         padding: 10px;
+        background-position: top center !important;
+        background-size: cover !important;
+        min-height: 100vh;
     }
     .title {
         font-size: 1.5rem;
