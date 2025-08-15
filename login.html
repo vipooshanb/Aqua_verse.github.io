@@ -14,6 +14,9 @@
             border-radius: 22px;
             box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.37);
             color: #fff;
+            margin: 40px auto;
+            width: 100%;
+            box-sizing: border-box;
         }
         body {
             min-height: 100vh;
@@ -21,6 +24,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            margin: 0;
         }
         .auth-container h2 {
             text-align: center;
@@ -44,6 +48,7 @@
             background: #1e293b;
             color: #fff;
             font-size: 1.1rem;
+            box-sizing: border-box;
         }
         .auth-container button {
             width: 100%;
@@ -70,6 +75,32 @@
         }
         .auth-container .switch-link:hover {
             text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .auth-container {
+                max-width: 98vw;
+                padding: 2rem 0.7rem;
+                border-radius: 14px;
+                margin: 18vw 0 0 0;
+            }
+            .auth-container h2 {
+                font-size: 1.5rem;
+            }
+            .auth-container label {
+                font-size: 1rem;
+            }
+            .auth-container input[type="text"],
+            .auth-container input[type="password"] {
+                font-size: 1rem;
+                padding: 0.8rem;
+            }
+            .auth-container button {
+                font-size: 1rem;
+                padding: 0.9rem;
+            }
+            .auth-container .switch-link {
+                font-size: 0.95rem;
+            }
         }
     </style>
 </head>
