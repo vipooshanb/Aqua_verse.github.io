@@ -116,7 +116,7 @@ body::before {
     margin-bottom: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 3px;
-    text-shadow: 2px 2px 8px rgb(0, 0, 0);          
+    text-shadow: 2px 2px 8px rgb(2, 255, 255);          
 }
     
 .volunteer-main-description {
@@ -125,7 +125,7 @@ body::before {
     margin-bottom: 2.5rem;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
     font-weight: bold;
-    color: black;
+    color: rgb(255, 255, 255);
 }
     
 .volunteer-main-button {
@@ -846,8 +846,10 @@ object-fit: cover;
 
 @media (max-width: 700px) {
     .program-card {
-        flex: 0 0 100%;
-        max-width: 100%;
+        flex: 0 0 90%;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
     .programs-grid {
         padding-left: 5px;
