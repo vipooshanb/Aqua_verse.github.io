@@ -144,9 +144,10 @@
       border-radius: 8px;
       width: 45px;
       height: 45px;
-      display: none;
       align-items: center;
       justify-content: center;
+      z-index: 2001;
+      position: relative;
     }
     
     .mobile-menu-btn:hover {
@@ -485,6 +486,8 @@
     @media (max-width: 768px) {
       .mobile-menu-btn {
         display: flex;
+        z-index: 2001;
+        position: relative;
       }
       
       .nav-container {

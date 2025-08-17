@@ -1,3 +1,7 @@
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="css/global.css">
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,6 +14,31 @@
     <link rel="stylesheet" href="css/global.css"/>
 </head>
 <body>
+  <header id="Home">
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="home.html">
+            <img src="Images/Aqua_Verse-logo.png" alt="AquaVerse Logo" class="nav-logo-img">
+          </a>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation" aria-expanded="false">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="home.html" class="nav-link"> Home</a></li>
+          <li><a href="team.html" class="nav-link"> Team</a></li>
+          <li><a href="table.html" class="nav-link"> Dive Sites</a></li>
+          <li><a href="volunteer.html" class="nav-link"> Volunteer</a></li>
+          <li><a href="sitemap.html" class="nav-link"> Site Map</a></li>
+          <li><a href="feedback.html" class="nav-link"> Feedback</a></li>
+          <li><a href="profile.html" class="nav-link"> Profile</a></li>
+          <li><a href="login.html" class="nav-link" id="loginBtn">Login</a></li>
+          <li><a href="signin.html" class="nav-link" id="signupBtn">Sign Up</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
     <!-- WhatsApp Button -->
   <a href="https://chat.whatsapp.com/IRZu4pxbqwiJgItY6MRjL9?mode=ac_t" class="whatsapp-button" aria-label="Contact us on WhatsApp">
     <i class="fab fa-whatsapp"></i>
@@ -165,4 +194,41 @@
   <a href="#home" class="go-to-top" id="goToTop"><i class="fas fa-arrow-up"></i></a>
   
 </body>
+<script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navMenu = document.getElementById('navMenu');
+    if (mobileMenuBtn && navMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        mobileMenuBtn.innerHTML = navMenu.classList.contains('active') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        mobileMenuBtn.setAttribute('aria-expanded', navMenu.classList.contains('active'));
+      });
+      // Close menu when a nav link is clicked (for mobile UX)
+      navMenu.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth <= 768 && navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+    }
+    // Highlight active nav link
+    const navLinks = document.querySelectorAll('.nav-link');
+    const currentPage = window.location.pathname.split('/').pop();
+    navLinks.forEach(link => {
+      const linkPage = link.getAttribute('href');
+      if (
+        (currentPage === '' && linkPage === 'home.html') ||
+        (currentPage === linkPage) ||
+        (currentPage === 'index2.html' && linkPage === 'home.html')
+      ) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+</script>
 </html>
