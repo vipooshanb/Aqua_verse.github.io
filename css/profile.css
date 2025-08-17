@@ -1,3 +1,26 @@
+@media (max-width: 700px) {
+  footer {
+    margin-left: 0 !important;
+    width: 100vw;
+    position: relative;
+    left: 0;
+    z-index: 1002;
+    background: rgba(10,35,66,0.98);
+    padding-bottom: 70px;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
+  }
+  .nav-bar-1 {
+    z-index: 1001;
+  }
+}
+@media (max-width: 480px) {
+  footer {
+    padding-bottom: 80px;
+    font-size: 0.95rem;
+    border-radius: 18px 18px 0 0;
+    min-height: 180px;
+  }
+}
 /* Universal box-sizing for better scaling */
 *, *::before, *::after {
   box-sizing: border-box;
