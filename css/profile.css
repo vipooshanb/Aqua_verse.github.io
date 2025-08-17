@@ -1,3 +1,75 @@
+/* Universal box-sizing for better scaling */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/* Extra responsive tweaks for all small screens */
+@media (max-width: 480px) {
+  .main-content {
+    padding: 6px 1vw 6px 1vw;
+    max-width: 100vw;
+    gap: 10px;
+  }
+  .card, .card-short-bio, .availability-card, .contact-card {
+    width: 98vw;
+    max-width: 99vw;
+    min-width: 0;
+    margin: 0 auto 10px auto;
+    padding: 8px 2vw;
+    font-size: 0.95rem;
+  }
+  .profile-pic {
+    width: 60vw;
+    height: 60vw;
+    max-width: 120px;
+    max-height: 120px;
+    margin: 0 auto 8px auto;
+    display: block;
+  }
+  .card-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .skills h3 {
+    font-size: 1rem;
+  }
+  .bar {
+    min-width: 20px;
+    max-width: 100vw;
+  }
+  .volunteer-table th, .volunteer-table td {
+    padding: 2px;
+    font-size: 0.9rem;
+  }
+  .volunteer-table {
+    font-size: 0.9rem;
+    display: block;
+    overflow-x: auto;
+    width: 100vw;
+    min-width: 0;
+  }
+  .interest-icons {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .interest {
+    padding: 4px;
+  }
+  .icon-style {
+    font-size: 22px;
+  }
+  .contact-form input, .contact-form textarea {
+    font-size: 0.95rem;
+    padding: 6px;
+  }
+  .form-btns {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .contact-form button {
+    width: 100%;
+    padding: 8px 0;
+  }
+}
 @media (max-width: 700px) {
   .card, .card-short-bio, .availability-card, .contact-card {
     width: 95vw;
