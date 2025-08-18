@@ -498,15 +498,14 @@ body::before {
         grid-template-columns: 90vw;
         gap: 16px;
         min-width: 220px;
-        width: 100%;
         overflow-x: auto;
     }
-        .team-card {
-            max-width: 270px;
-            width: 80vw;
-            margin-left: auto;
-            margin-right: auto;
-        }
+    .team-card {
+        width: 10px;
+        height: 350px;
+        margin-left: auto;
+        margin-right: auto;
+    }
     .main-title {
         font-size: 1.3rem;
     }
