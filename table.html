@@ -251,19 +251,7 @@
         link.classList.remove('active');
       }
     });
-        // Go to Top button functionality
-        const goToTopBtn = document.getElementById('goToTop');
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                goToTopBtn.classList.add('active');
-            } else {
-                goToTopBtn.classList.remove('active');
-            }
-        });
-        goToTopBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
+
   </script>
 </body>
 </html>

@@ -205,17 +205,7 @@
       }
     });
 
-    // Scroll to top button
-    const goToTopBtn = document.getElementById('goToTop');
-    window.addEventListener('scroll', () => {
-      if (window.pageYOffset > 300) {
-        goToTopBtn.classList.add('active');
-        document.querySelector('.navbar').classList.add('scrolled');
-      } else {
-        goToTopBtn.classList.remove('active');
-        document.querySelector('.navbar').classList.remove('scrolled');
-      }
-    });
+
 
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
